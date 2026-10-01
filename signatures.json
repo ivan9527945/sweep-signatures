@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 101,
+  "catalogVersion": 102,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -256,7 +256,7 @@
       "id": "sweep-even",
       "name": "Even Realities 眼鏡",
       "deviceClass": "glasses",
-      "note": "",
+      "note": "左右鏡腳各自廣播，名稱格式如 G1_45_L_92333。",
       "attention": "智慧眼鏡內建相機與麥克風。藍牙只代表眼鏡在場，無法判斷是否正在拍攝。沒有偵測到不代表沒有。請用眼睛確認。",
       "rules": [
         {
@@ -266,30 +266,50 @@
         },
         {
           "kind": "name",
-          "value": "Even G*"
+          "value": "G?_*_L_*"
+        },
+        {
+          "kind": "name",
+          "value": "G?_*_R_*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "sources": [
+        "https://github.com/even-realities/EvenDemoApp/blob/3899aac2/docs/G1_BLE_CONNECTION.en.md#L35-L39"
+      ]
     },
     {
       "id": "sweep-brilliant",
-      "name": "Brilliant Labs 眼鏡",
+      "name": "Brilliant Labs Frame / Halo",
       "deviceClass": "glasses",
-      "note": "",
+      "note": "Frame 與 Halo 韌體都在廣播中放入同一個 128-bit 服務 UUID，名稱為「Frame XX」或「Halo XX」（XX 為位址末碼）。",
       "attention": "智慧眼鏡內建相機與麥克風。藍牙只代表眼鏡在場，無法判斷是否正在拍攝。沒有偵測到不代表沒有。請用眼睛確認。",
       "rules": [
         {
+          "kind": "service",
+          "value": "7A2300015475A6A4654C8431F6AD49C4"
+        },
+        {
           "kind": "name",
-          "value": "Brilliant*"
+          "value": "Frame ??"
+        },
+        {
+          "kind": "name",
+          "value": "Halo ??"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "sources": [
+        "https://github.com/brilliantlabsAR/frame-codebase/blob/d3096344/source/application/bluetooth.c#L417-L418",
+        "https://github.com/brilliantlabsAR/frame-codebase/blob/d3096344/source/application/bluetooth.c#L535-L542",
+        "https://github.com/brilliantlabsAR/halo-firmware/blob/6ca8667d/applications/halo/BLE_SERVICES.md#L373-L374"
+      ]
     },
     {
       "id": "sweep-plaud",
       "name": "PLAUD 錄音卡／NotePin",
       "deviceClass": "recorder",
-      "note": "",
+      "note": "PLAUD 有自己的 SIG 廠商 ID；NotePin 另以 Realtek 晶片的廠商 ID 0x005D 加上固定資料 04 56 CF 00 廣播（只看 0x005D 會誤判其他 Realtek 裝置，所以必須比對整段資料）。",
       "attention": "AI 錄音穿戴裝置。藍牙只代表裝置在場且開機，無法判斷是否正在錄音。沒有偵測到不代表沒有（可能關機、已配對而安靜，或是其他品牌）。請用眼睛確認。",
       "rules": [
         {
@@ -298,11 +318,24 @@
           "company": 4018
         },
         {
+          "kind": "companyData",
+          "value": "",
+          "company": 93,
+          "prefix": "0456CF00"
+        },
+        {
           "kind": "name",
           "value": "PLAUD*"
+        },
+        {
+          "kind": "name",
+          "value": "*NotePin*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "sources": [
+        "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/app/ios/Runner/Ble/OmiBleDiscoveryNaming.swift#L17-L18"
+      ]
     },
     {
       "id": "sweep-limitless",
@@ -336,23 +369,44 @@
       "id": "sweep-omi",
       "name": "Omi（開源 AI 吊墜）",
       "deviceClass": "recorder",
-      "note": "",
+      "note": "Omi 韌體在廣播中放入自家音訊服務 UUID，預設名稱為 Omi。",
       "attention": "AI 錄音穿戴裝置。藍牙只代表裝置在場且開機，無法判斷是否正在錄音。沒有偵測到不代表沒有（可能關機、已配對而安靜，或是其他品牌）。請用眼睛確認。",
       "rules": [
         {
+          "kind": "service",
+          "value": "19B10000E8F2537E4F6CD104768A1214"
+        },
+        {
           "kind": "name",
           "value": "Omi"
-        },
-        {
-          "kind": "name",
-          "value": "Omi *"
-        },
-        {
-          "kind": "name",
-          "value": "OpenGlass*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "sources": [
+        "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/omi/firmware/omi/omi.conf#L107",
+        "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/omi/firmware/omi/src/lib/core/transport.c#L298"
+      ],
+      "yieldsTo": [
+        "sweep-omi-glass"
+      ]
+    },
+    {
+      "id": "sweep-omi-glass",
+      "name": "OmiGlass（開源 AI 眼鏡）",
+      "deviceClass": "glasses",
+      "note": "OmiGlass 韌體廣播與 Omi 相同的服務 UUID，名稱為 OMI Glass；有相機。",
+      "attention": "智慧眼鏡內建相機與麥克風。藍牙只代表眼鏡在場，無法判斷是否正在拍攝。沒有偵測到不代表沒有。請用眼睛確認。",
+      "rules": [
+        {
+          "kind": "name",
+          "value": "OMI Glass*",
+          "decisive": true
+        }
+      ],
+      "builtIn": true,
+      "sources": [
+        "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/omiGlass/firmware/src/config.h#L14"
+      ]
     },
     {
       "id": "sweep-friend",
@@ -363,10 +417,13 @@
       "rules": [
         {
           "kind": "name",
-          "value": "Friend Pendant*"
+          "value": "friend_*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "sources": [
+        "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/app/lib/services/devices/discovery/native_bluetooth_discoverer.dart#L96-L130"
+      ]
     },
     {
       "id": "sweep-fieldy",
