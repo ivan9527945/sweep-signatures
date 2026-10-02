@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 102,
+  "catalogVersion": 103,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -28,10 +28,15 @@
         }
       ],
       "builtIn": true,
+      "noteLocalized": {
+        "en": "The offline-finding broadcast of the Find My network (Apple type 0x12) or the Find My accessory service. An iPhone sends 0x12 too; Sweep uses its other Apple broadcasts to rule phones out.",
+        "ja": "Find My ネットワークのオフライン探索の発信（Apple タイプ 0x12）、または Find My アクセサリのサービス。iPhone 自体も 0x12 を発信するため、Sweep はほかの Apple の発信をもとにスマートフォンを除外します。"
+      },
       "yieldsTo": [
         "sweep-apple-device",
         "sweep-apple-audio"
-      ]
+      ],
+      "soundControl": "apple"
     },
     {
       "id": "sweep-tile",
@@ -62,7 +67,11 @@
           "value": "Tile*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "noteLocalized": {
+        "en": "Tile trackers use Bluetooth service UUIDs that Tile registered itself.",
+        "ja": "Tile のトラッカーは、Tile が自社で登録した Bluetooth サービス UUID を使います。"
+      }
     },
     {
       "id": "sweep-smarttag",
@@ -84,7 +93,11 @@
           "value": "*SmartTag*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "noteLocalized": {
+        "en": "SmartTag broadcasts service data under FD5A, a UUID registered by Samsung (SmartThings Find).",
+        "ja": "SmartTag は、Samsung が登録した FD5A のサービスデータで発信します（SmartThings Find）。"
+      }
     },
     {
       "id": "sweep-find-hub",
@@ -104,7 +117,19 @@
           "prefix": "41"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Google Find Hub tracker",
+        "ja": "Google Find Hub トラッカー"
+      },
+      "noteLocalized": {
+        "en": "Broadcasts 0x40 / 0x41 frames in Eddystone FEAA service data, as Google's Find My Device Network accessory specification describes.",
+        "ja": "Google の Find My Device Network アクセサリ仕様に従い、Eddystone FEAA サービスデータの 0x40／0x41 フレームで発信します。"
+      },
+      "sources": [
+        "https://developers.google.com/nearby/fast-pair/specifications/extensions/fmdn"
+      ],
+      "soundControl": "dult"
     },
     {
       "id": "sweep-dult",
@@ -118,7 +143,19 @@
           "value": "FCB2"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "DULT-compatible tracker",
+        "ja": "DULT 対応トラッカー"
+      },
+      "noteLocalized": {
+        "en": "The cross-platform tracker broadcast (FCB2) of the IETF “Detecting Unwanted Location Trackers” specification.",
+        "ja": "IETF「Detecting Unwanted Location Trackers」仕様による、プラットフォーム共通のトラッカーの発信（FCB2）。"
+      },
+      "sources": [
+        "https://datatracker.ietf.org/doc/html/draft-ietf-dult-accessory-protocol-00"
+      ],
+      "soundControl": "dult"
     },
     {
       "id": "sweep-chipolo",
@@ -208,7 +245,19 @@
           "value": "Oakley Meta*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Ray-Ban / Oakley Meta glasses",
+        "ja": "Ray-Ban / Oakley Meta グラス"
+      },
+      "noteLocalized": {
+        "en": "Bluetooth identifiers of Meta and Luxottica. Other Meta products such as Meta Quest may use the same identifiers.",
+        "ja": "Meta と Luxottica の Bluetooth 識別子。Meta Quest など、ほかの Meta 製品が同じ識別子を使っていることもあります。"
+      },
+      "attentionLocalized": {
+        "en": "Smart glasses have a built-in camera and microphones. Bluetooth only means the glasses are present; it cannot tell whether they are capturing anything. Nothing found does not mean nothing is there. Check with your own eyes.",
+        "ja": "スマートグラスはカメラとマイクを内蔵しています。Bluetooth はグラスがその場にあることを示すだけで、撮影中かどうかは判断できません。検出されなくても、存在しないとは限りません。目視で確認してください。"
+      }
     },
     {
       "id": "sweep-spectacles",
@@ -231,7 +280,11 @@
           "value": "Spectacles*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "attentionLocalized": {
+        "en": "Smart glasses have a built-in camera and microphones. Bluetooth only means the glasses are present; it cannot tell whether they are capturing anything. Nothing found does not mean nothing is there. Check with your own eyes.",
+        "ja": "スマートグラスはカメラとマイクを内蔵しています。Bluetooth はグラスがその場にあることを示すだけで、撮影中かどうかは判断できません。検出されなくても、存在しないとは限りません。目視で確認してください。"
+      }
     },
     {
       "id": "sweep-vuzix",
@@ -250,7 +303,15 @@
           "value": "Vuzix*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Vuzix smart glasses",
+        "ja": "Vuzix スマートグラス"
+      },
+      "attentionLocalized": {
+        "en": "Smart glasses have a built-in camera and microphones. Bluetooth only means the glasses are present; it cannot tell whether they are capturing anything. Nothing found does not mean nothing is there. Check with your own eyes.",
+        "ja": "スマートグラスはカメラとマイクを内蔵しています。Bluetooth はグラスがその場にあることを示すだけで、撮影中かどうかは判断できません。検出されなくても、存在しないとは限りません。目視で確認してください。"
+      }
     },
     {
       "id": "sweep-even",
@@ -274,6 +335,18 @@
         }
       ],
       "builtIn": true,
+      "nameLocalized": {
+        "en": "Even Realities glasses",
+        "ja": "Even Realities グラス"
+      },
+      "noteLocalized": {
+        "en": "The left and right temples each broadcast on their own, with names like G1_45_L_92333.",
+        "ja": "左右のテンプルがそれぞれ発信します。名前は G1_45_L_92333 のような形式です。"
+      },
+      "attentionLocalized": {
+        "en": "Smart glasses have a built-in camera and microphones. Bluetooth only means the glasses are present; it cannot tell whether they are capturing anything. Nothing found does not mean nothing is there. Check with your own eyes.",
+        "ja": "スマートグラスはカメラとマイクを内蔵しています。Bluetooth はグラスがその場にあることを示すだけで、撮影中かどうかは判断できません。検出されなくても、存在しないとは限りません。目視で確認してください。"
+      },
       "sources": [
         "https://github.com/even-realities/EvenDemoApp/blob/3899aac2/docs/G1_BLE_CONNECTION.en.md#L35-L39"
       ]
@@ -299,6 +372,14 @@
         }
       ],
       "builtIn": true,
+      "noteLocalized": {
+        "en": "The Frame and Halo firmware both put the same 128-bit service UUID in their broadcasts; the name is “Frame XX” or “Halo XX” (XX is the end of the address).",
+        "ja": "Frame と Halo のファームウェアは、どちらも同じ 128-bit サービス UUID を発信に含めます。名前は「Frame XX」または「Halo XX」です（XX はアドレスの末尾）。"
+      },
+      "attentionLocalized": {
+        "en": "Smart glasses have a built-in camera and microphones. Bluetooth only means the glasses are present; it cannot tell whether they are capturing anything. Nothing found does not mean nothing is there. Check with your own eyes.",
+        "ja": "スマートグラスはカメラとマイクを内蔵しています。Bluetooth はグラスがその場にあることを示すだけで、撮影中かどうかは判断できません。検出されなくても、存在しないとは限りません。目視で確認してください。"
+      },
       "sources": [
         "https://github.com/brilliantlabsAR/frame-codebase/blob/d3096344/source/application/bluetooth.c#L417-L418",
         "https://github.com/brilliantlabsAR/frame-codebase/blob/d3096344/source/application/bluetooth.c#L535-L542",
@@ -333,6 +414,18 @@
         }
       ],
       "builtIn": true,
+      "nameLocalized": {
+        "en": "PLAUD Note / NotePin",
+        "ja": "PLAUD Note／NotePin"
+      },
+      "noteLocalized": {
+        "en": "PLAUD has its own SIG company ID. NotePin also broadcasts with the company ID of its Realtek chip, 0x005D, followed by the fixed data 04 56 CF 00 (0x005D alone would also match other Realtek devices, so the whole data is compared).",
+        "ja": "PLAUD は独自の SIG 企業 ID を持っています。NotePin はこれとは別に、Realtek 製チップの企業 ID 0x005D と固定データ 04 56 CF 00 で発信します（0x005D だけではほかの Realtek 搭載機器も誤検出するため、データ全体を照合します）。"
+      },
+      "attentionLocalized": {
+        "en": "Wearable AI recorder. Bluetooth only means the device is present and switched on; it cannot tell whether it is recording. Nothing found does not mean nothing is there (it may be switched off, paired and quiet, or another brand). Check with your own eyes.",
+        "ja": "ウェアラブル型の AI 録音デバイス。Bluetooth は機器がその場にあり、電源が入っていることを示すだけで、録音中かどうかは判断できません。検出されなくても、存在しないとは限りません（電源が切れている、ペアリング済みで静かにしている、別のブランドである、など）。目視で確認してください。"
+      },
       "sources": [
         "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/app/ios/Runner/Ble/OmiBleDiscoveryNaming.swift#L17-L18"
       ]
@@ -349,7 +442,11 @@
           "value": "Limitless*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "attentionLocalized": {
+        "en": "Wearable AI recorder. Bluetooth only means the device is present and switched on; it cannot tell whether it is recording. Nothing found does not mean nothing is there (it may be switched off, paired and quiet, or another brand). Check with your own eyes.",
+        "ja": "ウェアラブル型の AI 録音デバイス。Bluetooth は機器がその場にあり、電源が入っていることを示すだけで、録音中かどうかは判断できません。検出されなくても、存在しないとは限りません（電源が切れている、ペアリング済みで静かにしている、別のブランドである、など）。目視で確認してください。"
+      }
     },
     {
       "id": "sweep-bee",
@@ -363,7 +460,15 @@
           "value": "Bee Pioneer*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Bee wearable recorder",
+        "ja": "Bee ウェアラブル録音デバイス"
+      },
+      "attentionLocalized": {
+        "en": "Wearable AI recorder. Bluetooth only means the device is present and switched on; it cannot tell whether it is recording. Nothing found does not mean nothing is there (it may be switched off, paired and quiet, or another brand). Check with your own eyes.",
+        "ja": "ウェアラブル型の AI 録音デバイス。Bluetooth は機器がその場にあり、電源が入っていることを示すだけで、録音中かどうかは判断できません。検出されなくても、存在しないとは限りません（電源が切れている、ペアリング済みで静かにしている、別のブランドである、など）。目視で確認してください。"
+      }
     },
     {
       "id": "sweep-omi",
@@ -382,6 +487,18 @@
         }
       ],
       "builtIn": true,
+      "nameLocalized": {
+        "en": "Omi (open-source AI pendant)",
+        "ja": "Omi（オープンソースの AI ペンダント）"
+      },
+      "noteLocalized": {
+        "en": "The Omi firmware puts its own audio service UUID in its broadcasts; the default name is Omi.",
+        "ja": "Omi のファームウェアは、独自のオーディオサービス UUID を発信に含めます。既定の名前は Omi です。"
+      },
+      "attentionLocalized": {
+        "en": "Wearable AI recorder. Bluetooth only means the device is present and switched on; it cannot tell whether it is recording. Nothing found does not mean nothing is there (it may be switched off, paired and quiet, or another brand). Check with your own eyes.",
+        "ja": "ウェアラブル型の AI 録音デバイス。Bluetooth は機器がその場にあり、電源が入っていることを示すだけで、録音中かどうかは判断できません。検出されなくても、存在しないとは限りません（電源が切れている、ペアリング済みで静かにしている、別のブランドである、など）。目視で確認してください。"
+      },
       "sources": [
         "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/omi/firmware/omi/omi.conf#L107",
         "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/omi/firmware/omi/src/lib/core/transport.c#L298"
@@ -404,6 +521,18 @@
         }
       ],
       "builtIn": true,
+      "nameLocalized": {
+        "en": "OmiGlass (open-source AI glasses)",
+        "ja": "OmiGlass（オープンソースの AI グラス）"
+      },
+      "noteLocalized": {
+        "en": "The OmiGlass firmware broadcasts the same service UUID as Omi under the name OMI Glass; it has a camera.",
+        "ja": "OmiGlass のファームウェアは Omi と同じサービス UUID を発信し、名前は OMI Glass です。カメラを搭載しています。"
+      },
+      "attentionLocalized": {
+        "en": "Smart glasses have a built-in camera and microphones. Bluetooth only means the glasses are present; it cannot tell whether they are capturing anything. Nothing found does not mean nothing is there. Check with your own eyes.",
+        "ja": "スマートグラスはカメラとマイクを内蔵しています。Bluetooth はグラスがその場にあることを示すだけで、撮影中かどうかは判断できません。検出されなくても、存在しないとは限りません。目視で確認してください。"
+      },
       "sources": [
         "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/omiGlass/firmware/src/config.h#L14"
       ]
@@ -421,6 +550,14 @@
         }
       ],
       "builtIn": true,
+      "nameLocalized": {
+        "en": "Friend pendant",
+        "ja": "Friend ペンダント"
+      },
+      "attentionLocalized": {
+        "en": "Wearable AI recorder. Bluetooth only means the device is present and switched on; it cannot tell whether it is recording. Nothing found does not mean nothing is there (it may be switched off, paired and quiet, or another brand). Check with your own eyes.",
+        "ja": "ウェアラブル型の AI 録音デバイス。Bluetooth は機器がその場にあり、電源が入っていることを示すだけで、録音中かどうかは判断できません。検出されなくても、存在しないとは限りません（電源が切れている、ペアリング済みで静かにしている、別のブランドである、など）。目視で確認してください。"
+      },
       "sources": [
         "https://github.com/BasedHardware/omi/blob/0a5bd79fd743b835dac3fc1e090f1d44067da444/app/lib/services/devices/discovery/native_bluetooth_discoverer.dart#L96-L130"
       ]
@@ -437,7 +574,11 @@
           "value": "Fieldy*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "attentionLocalized": {
+        "en": "Wearable AI recorder. Bluetooth only means the device is present and switched on; it cannot tell whether it is recording. Nothing found does not mean nothing is there (it may be switched off, paired and quiet, or another brand). Check with your own eyes.",
+        "ja": "ウェアラブル型の AI 録音デバイス。Bluetooth は機器がその場にあり、電源が入っていることを示すだけで、録音中かどうかは判断できません。検出されなくても、存在しないとは限りません（電源が切れている、ペアリング済みで静かにしている、別のブランドである、など）。目視で確認してください。"
+      }
     },
     {
       "id": "sweep-gopro",
@@ -513,7 +654,15 @@
           "value": "OsmoPocket*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "DJI Osmo camera",
+        "ja": "DJI Osmo カメラ"
+      },
+      "noteLocalized": {
+        "en": "DJI handheld and action cameras (Osmo Action / Pocket / 360).",
+        "ja": "DJI のハンドヘルドカメラとアクションカメラ（Osmo Action / Pocket / 360）。"
+      }
     },
     {
       "id": "sweep-wyze",
@@ -574,7 +723,11 @@
           "value": "Ring Setup*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Ring doorbell / camera",
+        "ja": "Ring ドアベル／カメラ"
+      }
     },
     {
       "id": "sweep-arlo",
@@ -632,7 +785,11 @@
           "value": "Tapo*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "TP-Link Tapo camera",
+        "ja": "TP-Link Tapo カメラ"
+      }
     },
     {
       "id": "sweep-reolink",
@@ -668,7 +825,15 @@
           "value": "LookCam*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Common miniature network camera",
+        "ja": "よくある小型ネットワークカメラ"
+      },
+      "noteLocalized": {
+        "en": "Default hotspot names of low-cost miniature Wi-Fi cameras (the ones used with phone apps such as V380, HDWiFiCam and LookCam).",
+        "ja": "安価な小型 Wi-Fi カメラの既定のアクセスポイント名（V380、HDWiFiCam、LookCam などのスマートフォンアプリで使うもの）。"
+      }
     },
     {
       "id": "sweep-hikvision",
@@ -1198,7 +1363,11 @@
           "value": "E8:27:25"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Axis network camera",
+        "ja": "Axis ネットワークカメラ"
+      }
     },
     {
       "id": "sweep-hanwha",
@@ -1264,7 +1433,15 @@
           "value": "FA:0B:BC"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Remote ID (ASTM F3411)",
+        "ja": "Remote ID（ASTM F3411）"
+      },
+      "noteLocalized": {
+        "en": "The electronic identification broadcast that regulations require of drones: Bluetooth service FFFA or the Wi-Fi vendor IE FA:0B:BC.",
+        "ja": "法令でドローンに義務づけられている電子識別の発信。Bluetooth サービス FFFA、または Wi-Fi のベンダー IE FA:0B:BC。"
+      }
     },
     {
       "id": "sweep-dji",
@@ -1427,7 +1604,15 @@
           "value": "Axon*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "noteLocalized": {
+        "en": "Body cameras and in-vehicle equipment for law enforcement (formerly TASER International).",
+        "ja": "法執行機関向けのボディカメラと車載機器（旧 TASER International）。"
+      },
+      "attentionLocalized": {
+        "en": "Public-safety equipment. Its presence is shown neutrally.",
+        "ja": "公共安全機器。その場にあることを中立的に表示しています。"
+      }
     },
     {
       "id": "sweep-motorola-solutions",
@@ -1450,7 +1635,15 @@
           "value": "FD8E"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "noteLocalized": {
+        "en": "Public-safety radios, body cameras and similar equipment.",
+        "ja": "公共安全向けの無線機、ボディカメラなどの機器。"
+      },
+      "attentionLocalized": {
+        "en": "Public-safety equipment. Its presence is shown neutrally.",
+        "ja": "公共安全機器。その場にあることを中立的に表示しています。"
+      }
     },
     {
       "id": "sweep-flipper",
@@ -1469,7 +1662,11 @@
           "value": "Flipper*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "attentionLocalized": {
+        "en": "A tool common in security testing and among developers. Seeing it does not mean an attack is taking place.",
+        "ja": "セキュリティテストや開発者の間でよく使われるツールです。検出されても、攻撃が行われていることを示すものではありません。"
+      }
     },
     {
       "id": "sweep-wifi-pineapple",
@@ -1483,7 +1680,11 @@
           "value": "Pineapple_*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "attentionLocalized": {
+        "en": "A tool common in security testing and among developers. Seeing it does not mean an attack is taking place.",
+        "ja": "セキュリティテストや開発者の間でよく使われるツールです。検出されても、攻撃が行われていることを示すものではありません。"
+      }
     },
     {
       "id": "sweep-pwnagotchi",
@@ -1497,7 +1698,11 @@
           "value": "pwnagotchi*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "attentionLocalized": {
+        "en": "A tool common in security testing and among developers. Seeing it does not mean an attack is taking place.",
+        "ja": "セキュリティテストや開発者の間でよく使われるツールです。検出されても、攻撃が行われていることを示すものではありません。"
+      }
     },
     {
       "id": "sweep-marauder",
@@ -1511,7 +1716,11 @@
           "value": "Marauder*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "attentionLocalized": {
+        "en": "A tool common in security testing and among developers. Seeing it does not mean an attack is taking place.",
+        "ja": "セキュリティテストや開発者の間でよく使われるツールです。検出されても、攻撃が行われていることを示すものではありません。"
+      }
     },
     {
       "id": "sweep-hobby-ble",
@@ -1541,7 +1750,19 @@
           "value": "HC-08*"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Bluetooth serial module (development board)",
+        "ja": "Bluetooth シリアルモジュール（開発ボード）"
+      },
+      "noteLocalized": {
+        "en": "Factory names of inexpensive Bluetooth serial modules such as HM-10, JDY and BT05, common in home-made devices.",
+        "ja": "HM-10、JDY、BT05 など、安価な Bluetooth シリアルモジュールの出荷時の名前。自作の機器でよく見られます。"
+      },
+      "attentionLocalized": {
+        "en": "A tool common in security testing and among developers. Seeing it does not mean an attack is taking place.",
+        "ja": "セキュリティテストや開発者の間でよく使われるツールです。検出されても、攻撃が行われていることを示すものではありません。"
+      }
     },
     {
       "id": "sweep-apple-device",
@@ -1581,7 +1802,15 @@
           "prefix": "0B"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Apple device (Continuity)",
+        "ja": "Apple 製機器（Continuity）"
+      },
+      "noteLocalized": {
+        "en": "Continuity broadcasts of iPhone, iPad, Mac and Apple Watch (Nearby Info, Handoff, AirDrop and others).",
+        "ja": "iPhone、iPad、Mac、Apple Watch の Continuity の発信（Nearby Info、Handoff、AirDrop など）。"
+      }
     },
     {
       "id": "sweep-apple-audio",
@@ -1620,7 +1849,11 @@
           "company": 117
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Samsung Galaxy device",
+        "ja": "Samsung Galaxy 機器"
+      }
     },
     {
       "id": "sweep-microsoft",
@@ -1635,7 +1868,11 @@
           "company": 6
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Microsoft device (Swift Pair / CDP)",
+        "ja": "Microsoft 製機器（Swift Pair / CDP）"
+      }
     },
     {
       "id": "sweep-google-fast-pair",
@@ -1649,7 +1886,11 @@
           "value": "FE2C"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Google Fast Pair accessory",
+        "ja": "Google Fast Pair アクセサリ"
+      }
     },
     {
       "id": "sweep-ibeacon",
@@ -1666,6 +1907,10 @@
         }
       ],
       "builtIn": true,
+      "noteLocalized": {
+        "en": "Apple's iBeacon format (Apple platforms filter it out; only the relay can see it).",
+        "ja": "Apple の iBeacon フォーマット（Apple のプラットフォームでは除外されるため、中継器でしか受信できません）。"
+      },
       "yieldsTo": [
         "*"
       ]
@@ -1693,7 +1938,11 @@
           "prefix": "20"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Eddystone beacon",
+        "ja": "Eddystone ビーコン"
+      }
     },
     {
       "id": "sweep-estimote",
@@ -1778,7 +2027,11 @@
           "value": "FDB1"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Oura Ring",
+        "ja": "Oura リング"
+      }
     },
     {
       "id": "sweep-withings",
@@ -1989,7 +2242,11 @@
           "value": "FE97"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Tesla vehicle",
+        "ja": "Tesla 車両"
+      }
     },
     {
       "id": "sweep-amazon",
@@ -2031,7 +2288,11 @@
           "value": "FE95"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Xiaomi IoT (MiBeacon)",
+        "ja": "Xiaomi IoT（MiBeacon）"
+      }
     },
     {
       "id": "sweep-ubiquiti",
@@ -3659,7 +3920,11 @@
           "value": "FC:AE:34"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "ARRIS / CommScope router",
+        "ja": "ARRIS / CommScope ルーター"
+      }
     },
     {
       "id": "sweep-isp-sagemcom",
@@ -4545,7 +4810,11 @@
           "value": "FC:66:37"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Sagemcom router",
+        "ja": "Sagemcom ルーター"
+      }
     },
     {
       "id": "sweep-isp-technicolor",
@@ -5079,7 +5348,11 @@
           "value": "FC:94:E3"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Technicolor / Vantiva router",
+        "ja": "Technicolor / Vantiva ルーター"
+      }
     },
     {
       "id": "sweep-isp-zte",
@@ -7097,7 +7370,11 @@
           "value": "FC:FA:21"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "ZTE router",
+        "ja": "ZTE ルーター"
+      }
     },
     {
       "id": "sweep-isp-huawei",
@@ -12775,7 +13052,11 @@
           "value": "FC:F7:38"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Huawei router",
+        "ja": "Huawei ルーター"
+      }
     },
     {
       "id": "sweep-isp-askey",
@@ -12997,7 +13278,11 @@
           "value": "FC:B4:E6"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Askey router",
+        "ja": "Askey ルーター"
+      }
     },
     {
       "id": "sweep-isp-sercomm",
@@ -13139,7 +13424,11 @@
           "value": "F4:64:B6"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Sercomm router",
+        "ja": "Sercomm ルーター"
+      }
     },
     {
       "id": "sweep-isp-arcadyan",
@@ -13509,7 +13798,11 @@
           "value": "FC:3D:A5"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Arcadyan router",
+        "ja": "Arcadyan ルーター"
+      }
     },
     {
       "id": "sweep-isp-zyxel",
@@ -13807,7 +14100,11 @@
           "value": "FC:F5:28"
         }
       ],
-      "builtIn": true
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Zyxel router",
+        "ja": "Zyxel ルーター"
+      }
     },
     {
       "id": "sweep-isp-tplink",
@@ -15594,6 +15891,153 @@
         }
       ],
       "builtIn": true
+    }
+  ],
+  "lanFingerprints": [
+    {
+      "match": "realm",
+      "pattern": "DH_*",
+      "vendor": "Dahua / Amcrest",
+      "model": "攝影機或錄影主機",
+      "modelLocalized": {
+        "en": "camera or video recorder",
+        "ja": "カメラまたはレコーダー"
+      },
+      "confidence": "high",
+      "sources": [
+        "https://s3.amazonaws.com/amcrest-files/AMCREST_HTTP_API_SDK_V2.10.pdf"
+      ]
+    },
+    {
+      "match": "server",
+      "pattern": "App-webs*",
+      "vendor": "Hikvision",
+      "model": "攝影機或錄影主機",
+      "modelLocalized": {
+        "en": "camera or video recorder",
+        "ja": "カメラまたはレコーダー"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://github.com/loozhengyuan/hikvision-sdk/blob/accc8f9085d68c804626ea9acb574560d9662188/resources/isapi.pdf"
+      ]
+    },
+    {
+      "match": "realm",
+      "pattern": "IP Camera(*)",
+      "vendor": "Hikvision",
+      "confidence": "high",
+      "sources": [
+        "https://github.com/loozhengyuan/hikvision-sdk/blob/accc8f9085d68c804626ea9acb574560d9662188/resources/isapi.pdf"
+      ]
+    },
+    {
+      "match": "cert",
+      "pattern": "Axis device ID Intermediate CA*",
+      "vendor": "Axis",
+      "confidence": "medium",
+      "sources": [
+        "https://www.axis.com/support/public-key-infrastructure-repository",
+        "https://help.axis.com/en-us/axis-os-hardening-guide"
+      ]
+    },
+    {
+      "match": "server",
+      "pattern": "MJPG-Streamer*",
+      "vendor": "MJPG-Streamer",
+      "model": "網路攝影機串流軟體",
+      "modelLocalized": {
+        "en": "webcam streaming software",
+        "ja": "ウェブカメラ用ストリーミングソフトウェア"
+      },
+      "confidence": "high",
+      "sources": [
+        "https://github.com/jacksonliam/mjpg-streamer/blob/310b29f4a94c46652b20c4b7b6e5cf24e532af39/mjpg-streamer-experimental/plugins/output_http/httpd.h#L47"
+      ]
+    },
+    {
+      "match": "realm",
+      "pattern": "MJPG-Streamer",
+      "vendor": "MJPG-Streamer",
+      "model": "網路攝影機串流軟體",
+      "modelLocalized": {
+        "en": "webcam streaming software",
+        "ja": "ウェブカメラ用ストリーミングソフトウェア"
+      },
+      "confidence": "high",
+      "sources": [
+        "https://github.com/jacksonliam/mjpg-streamer/blob/310b29f4a94c46652b20c4b7b6e5cf24e532af39/mjpg-streamer-experimental/plugins/output_http/httpd.c#L647"
+      ]
+    },
+    {
+      "match": "realm",
+      "pattern": "Motion",
+      "vendor": "Motion",
+      "model": "動態偵測攝影機軟體",
+      "modelLocalized": {
+        "en": "motion-detection camera software",
+        "ja": "動体検知カメラソフトウェア"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://github.com/Motion-Project/motion/blob/e8bbebf173367a8e4de1268b077303b50513277e/src/webu_ans.cpp#L620"
+      ]
+    },
+    {
+      "match": "title",
+      "pattern": "ESP32 OV*",
+      "vendor": "Espressif ESP32-CAM",
+      "model": "攝影機模組（CameraWebServer 範例韌體）",
+      "modelLocalized": {
+        "en": "camera module (CameraWebServer example firmware)",
+        "ja": "カメラモジュール（CameraWebServer サンプルファームウェア）"
+      },
+      "confidence": "high",
+      "sources": [
+        "https://github.com/espressif/esp-who/blob/4c844ad3ef7760e23315d19af5cd48a4c17a4a92/examples/single_chip/camera_web_server/main/www/index_ov2640.html"
+      ]
+    },
+    {
+      "match": "title",
+      "pattern": "RPi Cam Control*",
+      "vendor": "Raspberry Pi",
+      "model": "攝影機（RPi Cam Web Interface）",
+      "modelLocalized": {
+        "en": "camera (RPi Cam Web Interface)",
+        "ja": "カメラ（RPi Cam Web Interface）"
+      },
+      "confidence": "high",
+      "sources": [
+        "https://github.com/silvanmelchior/RPi_Cam_Web_Interface/blob/8dc8230c6a1bc74a381054732a18e8f833215160/www/config.php#L9"
+      ]
+    },
+    {
+      "match": "server",
+      "pattern": "gortsplib",
+      "vendor": "MediaMTX",
+      "model": "影像串流伺服器（gortsplib）",
+      "modelLocalized": {
+        "en": "video streaming server (gortsplib)",
+        "ja": "映像ストリーミングサーバー（gortsplib）"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://github.com/bluenviron/gortsplib/blob/32cec10f832c97122810fa7f3e64b2138afd1a9d/server.go#L18"
+      ]
+    },
+    {
+      "match": "realm",
+      "pattern": "go2rtc",
+      "vendor": "go2rtc",
+      "model": "影像串流伺服器",
+      "modelLocalized": {
+        "en": "video streaming server",
+        "ja": "映像ストリーミングサーバー"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://github.com/AlexxIT/go2rtc/blob/c245815e75e2a5fd60b4290f12bfc04e55a984d3/pkg/rtsp/server.go#L53"
+      ]
     }
   ]
 }
