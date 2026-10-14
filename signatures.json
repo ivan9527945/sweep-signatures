@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 103,
+  "catalogVersion": 104,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -29,8 +29,8 @@
       ],
       "builtIn": true,
       "noteLocalized": {
-        "en": "The offline-finding broadcast of the Find My network (Apple type 0x12) or the Find My accessory service. An iPhone sends 0x12 too; Sweep uses its other Apple broadcasts to rule phones out.",
-        "ja": "Find My ネットワークのオフライン探索の発信（Apple タイプ 0x12）、または Find My アクセサリのサービス。iPhone 自体も 0x12 を発信するため、Sweep はほかの Apple の発信をもとにスマートフォンを除外します。"
+        "en": "The offline-finding broadcast of the Find My network (Apple type 0x12) or the Find My accessory service. An iPhone sends 0x12 too; Hushsweep uses its other Apple broadcasts to rule phones out.",
+        "ja": "Find My ネットワークのオフライン探索の発信（Apple タイプ 0x12）、または Find My アクセサリのサービス。iPhone 自体も 0x12 を発信するため、Hushsweep はほかの Apple の発信をもとにスマートフォンを除外します。"
       },
       "yieldsTo": [
         "sweep-apple-device",
