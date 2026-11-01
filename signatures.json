@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 104,
+  "catalogVersion": 105,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -1466,6 +1466,10 @@
         {
           "kind": "oui",
           "value": "0C:9A:E6"
+        },
+        {
+          "kind": "oui",
+          "value": "24:91:23"
         },
         {
           "kind": "oui",
@@ -5201,6 +5205,10 @@
         },
         {
           "kind": "oui",
+          "value": "C0:80:09"
+        },
+        {
+          "kind": "oui",
           "value": "C4:27:95"
         },
         {
@@ -5903,6 +5911,10 @@
         },
         {
           "kind": "oui",
+          "value": "48:13:18"
+        },
+        {
+          "kind": "oui",
           "value": "48:28:2F"
         },
         {
@@ -6311,6 +6323,10 @@
         },
         {
           "kind": "oui",
+          "value": "7C:86:F3"
+        },
+        {
+          "kind": "oui",
           "value": "7C:B3:0A"
         },
         {
@@ -6532,6 +6548,10 @@
         {
           "kind": "oui",
           "value": "98:6C:F5"
+        },
+        {
+          "kind": "oui",
+          "value": "98:98:91"
         },
         {
           "kind": "oui",
