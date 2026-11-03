@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 105,
+  "catalogVersion": 106,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -13684,6 +13684,10 @@
         {
           "kind": "oui",
           "value": "8C:83:94"
+        },
+        {
+          "kind": "oui",
+          "value": "8C:A0:2C"
         },
         {
           "kind": "oui",
