@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 108,
+  "catalogVersion": 109,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -581,6 +581,29 @@
       }
     },
     {
+      "id": "sweep-instamic",
+      "name": "Instamic 穿戴式錄音機",
+      "deviceClass": "recorder",
+      "note": "",
+      "attention": "AI 錄音穿戴裝置。藍牙只代表裝置在場且開機，無法判斷是否正在錄音。沒有偵測到不代表沒有（可能關機、已配對而安靜，或是其他品牌）。請用眼睛確認。",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 2607
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Instamic wearable recorder",
+        "ja": "Instamic ウェアラブルレコーダー"
+      },
+      "attentionLocalized": {
+        "en": "Wearable AI recorder. Bluetooth only means the device is present and switched on; it cannot tell whether it is recording. Nothing found does not mean nothing is there (it may be switched off, paired and quiet, or another brand). Check with your own eyes.",
+        "ja": "ウェアラブル型の AI 録音デバイス。Bluetooth は機器がその場にあり、電源が入っていることを示すだけで、録音中かどうかは判断できません。検出されなくても、存在しないとは限りません（電源が切れている、ペアリング済みで静かにしている、別のブランドである、など）。目視で確認してください。"
+      }
+    },
+    {
       "id": "sweep-gopro",
       "name": "GoPro",
       "deviceClass": "camera",
@@ -648,6 +671,10 @@
         {
           "kind": "name",
           "value": "OsmoAction*"
+        },
+        {
+          "kind": "oui",
+          "value": "20:1F:55"
         },
         {
           "kind": "name",
@@ -721,6 +748,58 @@
         {
           "kind": "ssid",
           "value": "Ring Setup*"
+        },
+        {
+          "kind": "oui",
+          "value": "00:B4:63"
+        },
+        {
+          "kind": "oui",
+          "value": "18:7F:88"
+        },
+        {
+          "kind": "oui",
+          "value": "24:2B:D6"
+        },
+        {
+          "kind": "oui",
+          "value": "34:3E:A4"
+        },
+        {
+          "kind": "oui",
+          "value": "50:E4:67"
+        },
+        {
+          "kind": "oui",
+          "value": "54:E0:19"
+        },
+        {
+          "kind": "oui",
+          "value": "5C:47:5E"
+        },
+        {
+          "kind": "oui",
+          "value": "64:9A:63"
+        },
+        {
+          "kind": "oui",
+          "value": "90:48:6C"
+        },
+        {
+          "kind": "oui",
+          "value": "9C:76:13"
+        },
+        {
+          "kind": "oui",
+          "value": "AC:9F:C3"
+        },
+        {
+          "kind": "oui",
+          "value": "C4:DB:AD"
+        },
+        {
+          "kind": "oui",
+          "value": "CC:3B:FB"
         }
       ],
       "builtIn": true,
@@ -736,6 +815,11 @@
       "note": "",
       "attention": "",
       "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 3097
+        },
         {
           "kind": "name",
           "value": "Arlo*"
@@ -835,6 +919,10 @@
         {
           "kind": "oui",
           "value": "B8:88:80"
+        },
+        {
+          "kind": "service",
+          "value": "FE91"
         }
       ],
       "builtIn": true,
@@ -874,6 +962,866 @@
       }
     },
     {
+      "id": "sweep-amcrest",
+      "name": "Amcrest",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:65:1E"
+        },
+        {
+          "kind": "oui",
+          "value": "9C:8E:CD"
+        },
+        {
+          "kind": "oui",
+          "value": "A0:60:32"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-lorex",
+      "name": "Lorex",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:1F:54"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-swann",
+      "name": "Swann",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "BC:51:FE"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-zmodo",
+      "name": "Zmodo",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "04:5C:06"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-night-owl",
+      "name": "Night Owl",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "54:2B:57"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-blink",
+      "name": "Blink（Amazon）",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "3C:A0:70"
+        },
+        {
+          "kind": "oui",
+          "value": "70:AD:43"
+        },
+        {
+          "kind": "oui",
+          "value": "74:13:48"
+        },
+        {
+          "kind": "oui",
+          "value": "74:AB:93"
+        },
+        {
+          "kind": "oui",
+          "value": "C8:19:D8"
+        },
+        {
+          "kind": "oui",
+          "value": "F0:74:C1"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Blink (Amazon)",
+        "ja": "Blink（Amazon）"
+      }
+    },
+    {
+      "id": "sweep-dropcam",
+      "name": "Dropcam / Nest Cam（舊款）",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "30:8C:FB"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Dropcam / Nest Cam (older models)",
+        "ja": "Dropcam／Nest Cam（旧モデル）"
+      }
+    },
+    {
+      "id": "sweep-canary",
+      "name": "Canary",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "D8:42:E2"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-yi",
+      "name": "YI / Kami（小蟻）攝影機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1441
+        },
+        {
+          "kind": "oui",
+          "value": "58:70:C6"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "YI / Kami camera",
+        "ja": "YI／Kami カメラ"
+      }
+    },
+    {
+      "id": "sweep-gwelltimes",
+      "name": "Yoosee 系列攝影機（Gwelltimes）",
+      "deviceClass": "camera",
+      "note": "Yoosee App 所用的攝影機模組製造商，許多白牌攝影機採用。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "4C:B0:08"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Yoosee-series camera (Gwelltimes)",
+        "ja": "Yoosee 系カメラ（Gwelltimes）"
+      },
+      "noteLocalized": {
+        "en": "Maker of the camera modules used with the Yoosee app, found in many white-label cameras.",
+        "ja": "Yoosee アプリで使うカメラモジュールのメーカー。多くのノーブランドカメラに採用。"
+      }
+    },
+    {
+      "id": "sweep-netvue",
+      "name": "Netvue",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "64:D4:F0"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-bosma",
+      "name": "Bosma",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "F8:B2:F3"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-skybell",
+      "name": "SkyBell 門鈴",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "68:F0:D0"
+        },
+        {
+          "kind": "oui",
+          "value": "9C:54:DA"
+        },
+        {
+          "kind": "oui",
+          "value": "D0:C1:93"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "SkyBell doorbell",
+        "ja": "SkyBell ドアホン"
+      }
+    },
+    {
+      "id": "sweep-doorbird",
+      "name": "DoorBird 門鈴",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1259
+        },
+        {
+          "kind": "oui",
+          "value": "58:D8:A7"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "DoorBird doorbell",
+        "ja": "DoorBird ドアホン"
+      }
+    },
+    {
+      "id": "sweep-nanit",
+      "name": "Nanit 嬰兒監視器",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "44:EA:54"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Nanit baby monitor",
+        "ja": "Nanit ベビーモニター"
+      }
+    },
+    {
+      "id": "sweep-owlet",
+      "name": "Owlet 嬰兒監視器",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 3743
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Owlet baby monitor",
+        "ja": "Owlet ベビーモニター"
+      }
+    },
+    {
+      "id": "sweep-flir",
+      "name": "FLIR 熱像儀",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 2793
+        },
+        {
+          "kind": "oui",
+          "value": "00:1B:D8"
+        },
+        {
+          "kind": "oui",
+          "value": "00:40:7F"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "FLIR thermal camera",
+        "ja": "FLIR サーマルカメラ"
+      }
+    },
+    {
+      "id": "sweep-yukon",
+      "name": "Yukon / Pulsar 夜視與熱像儀",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 2540
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Yukon / Pulsar night-vision and thermal imagers",
+        "ja": "Yukon／Pulsar 暗視・熱画像装置"
+      }
+    },
+    {
+      "id": "sweep-canon",
+      "name": "Canon 相機",
+      "deviceClass": "camera",
+      "note": "Canon 的 SIG 廠商 ID 與相機部門的 OUI；印表機用不同的登記。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 425
+        },
+        {
+          "kind": "oui",
+          "value": "00:00:85"
+        },
+        {
+          "kind": "oui",
+          "value": "00:1E:8F"
+        },
+        {
+          "kind": "oui",
+          "value": "00:30:C4"
+        },
+        {
+          "kind": "oui",
+          "value": "00:BB:C1"
+        },
+        {
+          "kind": "oui",
+          "value": "18:0C:AC"
+        },
+        {
+          "kind": "oui",
+          "value": "2C:9E:FC"
+        },
+        {
+          "kind": "oui",
+          "value": "34:9F:7B"
+        },
+        {
+          "kind": "oui",
+          "value": "40:F8:DF"
+        },
+        {
+          "kind": "oui",
+          "value": "50:03:CF"
+        },
+        {
+          "kind": "oui",
+          "value": "5C:62:5A"
+        },
+        {
+          "kind": "oui",
+          "value": "60:12:8B"
+        },
+        {
+          "kind": "oui",
+          "value": "6C:3C:7C"
+        },
+        {
+          "kind": "oui",
+          "value": "6C:F2:D8"
+        },
+        {
+          "kind": "oui",
+          "value": "74:38:B7"
+        },
+        {
+          "kind": "oui",
+          "value": "74:BF:C0"
+        },
+        {
+          "kind": "oui",
+          "value": "80:03:0D"
+        },
+        {
+          "kind": "oui",
+          "value": "84:BA:3B"
+        },
+        {
+          "kind": "oui",
+          "value": "88:87:17"
+        },
+        {
+          "kind": "oui",
+          "value": "9C:32:CE"
+        },
+        {
+          "kind": "oui",
+          "value": "A4:F0:1F"
+        },
+        {
+          "kind": "oui",
+          "value": "AC:2F:E5"
+        },
+        {
+          "kind": "oui",
+          "value": "D8:49:2F"
+        },
+        {
+          "kind": "oui",
+          "value": "DC:C2:C9"
+        },
+        {
+          "kind": "oui",
+          "value": "F4:81:39"
+        },
+        {
+          "kind": "oui",
+          "value": "F4:A9:97"
+        },
+        {
+          "kind": "oui",
+          "value": "F8:0D:60"
+        },
+        {
+          "kind": "oui",
+          "value": "F8:A2:6D"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Canon camera",
+        "ja": "Canon カメラ"
+      },
+      "noteLocalized": {
+        "en": "Canon's SIG company ID and the imaging division's OUIs; printers use other registrations.",
+        "ja": "Canon の SIG 企業 ID とイメージング部門の OUI。プリンターは別の登録。"
+      }
+    },
+    {
+      "id": "sweep-nikon",
+      "name": "Nikon 相機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 921
+        },
+        {
+          "kind": "oui",
+          "value": "00:90:B5"
+        },
+        {
+          "kind": "oui",
+          "value": "3C:BE:E1"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Nikon camera",
+        "ja": "Nikon カメラ"
+      }
+    },
+    {
+      "id": "sweep-fujifilm",
+      "name": "FUJIFILM 相機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1240
+        },
+        {
+          "kind": "oui",
+          "value": "00:C0:2D"
+        },
+        {
+          "kind": "oui",
+          "value": "88:B4:36"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "FUJIFILM camera",
+        "ja": "FUJIFILM カメラ"
+      }
+    },
+    {
+      "id": "sweep-olympus-om",
+      "name": "Olympus / OM System 相機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1232
+        },
+        {
+          "kind": "company",
+          "value": "",
+          "company": 2545
+        },
+        {
+          "kind": "oui",
+          "value": "00:C0:D3"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Olympus / OM System camera",
+        "ja": "Olympus／OM System カメラ"
+      }
+    },
+    {
+      "id": "sweep-ricoh",
+      "name": "Ricoh / Pentax 相機（GR、Theta）",
+      "deviceClass": "camera",
+      "note": "只用 SIG 廠商 ID；Ricoh 的 OUI 多半是印表機。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1631
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Ricoh / Pentax camera (GR, Theta)",
+        "ja": "Ricoh／Pentax カメラ（GR、Theta）"
+      },
+      "noteLocalized": {
+        "en": "SIG company ID only; Ricoh's OUIs are mostly printers.",
+        "ja": "SIG 企業 ID のみ。Ricoh の OUI は大半がプリンター。"
+      }
+    },
+    {
+      "id": "sweep-leica",
+      "name": "Leica 相機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1306
+        },
+        {
+          "kind": "oui",
+          "value": "8C:87:3B"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Leica camera",
+        "ja": "Leica カメラ"
+      }
+    },
+    {
+      "id": "sweep-sony-camera",
+      "name": "Sony 相機",
+      "deviceClass": "camera",
+      "note": "只用相機部門的 OUI；Sony 的 SIG 廠商 ID 由音訊裝置使用。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "2C:97:ED"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Sony camera",
+        "ja": "Sony カメラ"
+      },
+      "noteLocalized": {
+        "en": "Imaging division OUI only; Sony's SIG company ID is used by its audio devices.",
+        "ja": "イメージング部門の OUI のみ。Sony の SIG 企業 ID はオーディオ機器が使用。"
+      }
+    },
+    {
+      "id": "sweep-zcam",
+      "name": "Z CAM 電影攝影機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 2907
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Z CAM cinema camera",
+        "ja": "Z CAM シネマカメラ"
+      }
+    },
+    {
+      "id": "sweep-kandao",
+      "name": "Kandao 全景相機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "70:65:A3"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Kandao 360 camera",
+        "ja": "Kandao 360 度カメラ"
+      }
+    },
+    {
+      "id": "sweep-blackmagic",
+      "name": "Blackmagic Design",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "7C:2E:0D"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-atomos",
+      "name": "Atomos 錄影監視器",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "5C:F9:F0"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Atomos monitor-recorder",
+        "ja": "Atomos モニターレコーダー"
+      }
+    },
+    {
+      "id": "sweep-opal",
+      "name": "Opal 電腦視訊鏡頭",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 3888
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Opal webcam",
+        "ja": "Opal ウェブカメラ"
+      }
+    },
+    {
+      "id": "sweep-owl-labs",
+      "name": "Owl Labs 會議攝影機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1015
+        },
+        {
+          "kind": "oui",
+          "value": "BC:D7:13"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Owl Labs meeting camera",
+        "ja": "Owl Labs 会議用カメラ"
+      }
+    },
+    {
+      "id": "sweep-lumens",
+      "name": "Lumens 攝影機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "DC:E2:AC"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Lumens camera",
+        "ja": "Lumens カメラ"
+      }
+    },
+    {
+      "id": "sweep-marshall",
+      "name": "Marshall Electronics 攝影機",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:23:A8"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Marshall Electronics camera",
+        "ja": "Marshall Electronics カメラ"
+      }
+    },
+    {
+      "id": "sweep-70mai",
+      "name": "70mai 行車記錄器",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 2313
+        },
+        {
+          "kind": "service",
+          "value": "FD4D"
+        },
+        {
+          "kind": "service",
+          "value": "FD4E"
+        },
+        {
+          "kind": "oui",
+          "value": "44:27:F3"
+        },
+        {
+          "kind": "oui",
+          "value": "B8:59:C8"
+        },
+        {
+          "kind": "name",
+          "value": "70mai*"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "70mai dash cam",
+        "ja": "70mai ドライブレコーダー"
+      }
+    },
+    {
+      "id": "sweep-blackvue",
+      "name": "BlackVue 行車記錄器（Pittasoft）",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:25:42"
+        },
+        {
+          "kind": "ssid",
+          "value": "BlackVue*"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "BlackVue dash cam (Pittasoft)",
+        "ja": "BlackVue ドライブレコーダー（Pittasoft）"
+      }
+    },
+    {
+      "id": "sweep-thinkware",
+      "name": "Thinkware 行車記錄器",
+      "deviceClass": "camera",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:1F:4F"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Thinkware dash cam",
+        "ja": "Thinkware ドライブレコーダー"
+      }
+    },
+    {
       "id": "sweep-spycam-apps",
       "name": "常見微型網路攝影機",
       "deviceClass": "camera",
@@ -910,6 +1858,11 @@
       "note": "",
       "attention": "",
       "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 3621
+        },
         {
           "kind": "oui",
           "value": "00:BC:99"
@@ -1255,6 +2208,66 @@
           "value": "FC:9F:FD"
         },
         {
+          "kind": "oui",
+          "value": "0C:A6:4C"
+        },
+        {
+          "kind": "oui",
+          "value": "20:BB:BC"
+        },
+        {
+          "kind": "oui",
+          "value": "34:C6:DD"
+        },
+        {
+          "kind": "oui",
+          "value": "38:F2:5D"
+        },
+        {
+          "kind": "oui",
+          "value": "54:D6:0D"
+        },
+        {
+          "kind": "oui",
+          "value": "58:8F:CF"
+        },
+        {
+          "kind": "oui",
+          "value": "64:24:4D"
+        },
+        {
+          "kind": "oui",
+          "value": "64:F2:FB"
+        },
+        {
+          "kind": "oui",
+          "value": "78:A6:A0"
+        },
+        {
+          "kind": "oui",
+          "value": "78:C1:AE"
+        },
+        {
+          "kind": "oui",
+          "value": "94:EC:13"
+        },
+        {
+          "kind": "oui",
+          "value": "AC:1C:26"
+        },
+        {
+          "kind": "oui",
+          "value": "EC:97:E0"
+        },
+        {
+          "kind": "oui",
+          "value": "F4:70:18"
+        },
+        {
+          "kind": "oui",
+          "value": "FC:24:22"
+        },
+        {
           "kind": "ssid",
           "value": "EZVIZ*"
         }
@@ -1415,6 +2428,11 @@
       "attention": "",
       "rules": [
         {
+          "kind": "company",
+          "value": "",
+          "company": 3419
+        },
+        {
           "kind": "oui",
           "value": "00:40:8C"
         },
@@ -1444,6 +2462,10 @@
       "note": "",
       "attention": "",
       "rules": [
+        {
+          "kind": "oui",
+          "value": "00:09:18"
+        },
         {
           "kind": "oui",
           "value": "44:B4:23"
@@ -1484,6 +2506,599 @@
         }
       ],
       "builtIn": true
+    },
+    {
+      "id": "sweep-bosch-security",
+      "name": "Bosch Security Systems",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:01:31"
+        },
+        {
+          "kind": "oui",
+          "value": "00:04:63"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-avigilon",
+      "name": "Avigilon（Motorola Solutions）",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "70:1A:D5"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Avigilon (Motorola Solutions)",
+        "ja": "Avigilon（Motorola Solutions）"
+      }
+    },
+    {
+      "id": "sweep-vivotek",
+      "name": "Vivotek",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:02:D1"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-mobotix",
+      "name": "Mobotix",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:03:C5"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-ipro",
+      "name": "i-PRO（原 Panasonic 安控）",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "D4:2D:C5"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "i-PRO (formerly Panasonic security)",
+        "ja": "i-PRO（旧 Panasonic セキュリティ）"
+      }
+    },
+    {
+      "id": "sweep-geovision",
+      "name": "GeoVision",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:13:E2"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-milesight",
+      "name": "Milesight",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "1C:C3:16"
+        },
+        {
+          "kind": "oui",
+          "value": "24:E1:24"
+        },
+        {
+          "kind": "oui",
+          "value": "C0:BA:1F"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-sunell",
+      "name": "Sunell",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:1C:27"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-tiandy",
+      "name": "Tiandy",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "3C:DA:6D"
+        },
+        {
+          "kind": "oui",
+          "value": "BC:51:6C"
+        },
+        {
+          "kind": "oui",
+          "value": "E4:E6:6C"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-raysharp",
+      "name": "Raysharp（多家品牌的錄影主機代工）",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:23:63"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Raysharp (OEM video recorders for several brands)",
+        "ja": "Raysharp（複数ブランドのレコーダー OEM）"
+      }
+    },
+    {
+      "id": "sweep-jovision",
+      "name": "Jovision",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "AC:95:72"
+        },
+        {
+          "kind": "oui",
+          "value": "E0:62:90"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-idis",
+      "name": "IDIS",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:03:22"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-everfocus",
+      "name": "EverFocus",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:11:14"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-acti",
+      "name": "ACTi",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:0F:7C"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-zavio",
+      "name": "Zavio",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:1B:FE"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-hunt-electronic",
+      "name": "Hunt Electronic",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:0F:0D"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-cnb",
+      "name": "CNB Technology",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:1E:81"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-ktc",
+      "name": "KT&C",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:15:DC"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-speco",
+      "name": "Speco Technologies",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "5C:F2:07"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-digital-watchdog",
+      "name": "Digital Watchdog",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "A8:DC:5A"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-arecont",
+      "name": "Arecont Vision",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:1A:07"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-honeywell-video",
+      "name": "Honeywell Video Systems",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:0A:13"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-provision-isr",
+      "name": "Provision-ISR",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "A0:E0:25"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-videotec",
+      "name": "Videotec",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:21:A6"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-costar",
+      "name": "Costar Video Systems",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "A0:C2:DE"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-vitek",
+      "name": "Vitek",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "1C:7C:45"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-iqinvision",
+      "name": "IQinVision",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:50:1A"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-linovision",
+      "name": "Linovision",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "B0:D7:DE"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-hankvision",
+      "name": "Hankvision",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "70:B9:BB"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-safety-vision",
+      "name": "Safety Vision（車載監視）",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:22:AF"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Safety Vision (mobile video)",
+        "ja": "Safety Vision（車載映像）"
+      }
+    },
+    {
+      "id": "sweep-wireless-cctv",
+      "name": "Wireless CCTV（WCCTV）",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "BC:E7:96"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Wireless CCTV (WCCTV)",
+        "ja": "Wireless CCTV（WCCTV）"
+      }
+    },
+    {
+      "id": "sweep-verkada",
+      "name": "Verkada",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "E0:A7:00"
+        },
+        {
+          "kind": "service",
+          "value": "FC2C"
+        },
+        {
+          "kind": "service",
+          "value": "FD3A"
+        },
+        {
+          "kind": "service",
+          "value": "FD3B"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-rhombus",
+      "name": "Rhombus",
+      "deviceClass": "surveillance",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1885
+        },
+        {
+          "kind": "service",
+          "value": "FDA9"
+        },
+        {
+          "kind": "oui",
+          "value": "CC:47:BD"
+        }
+      ],
+      "builtIn": true
+    },
+    {
+      "id": "sweep-cctv-makers",
+      "name": "其他 CCTV／DVR 製造商（IEEE 登記名稱）",
+      "deviceClass": "surveillance",
+      "note": "登記名稱含 CCTV、Surveillance 或 DVR 的製造商：GKB、Kingtek、CCTV Neotech、StreamCCTV、Watchnet、DVR C&C、Multivision、Surveillance Pro、Concept Pro、Euro Protection、Shanghai Surveillance。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "00:0A:A4"
+        },
+        {
+          "kind": "oui",
+          "value": "00:13:30"
+        },
+        {
+          "kind": "oui",
+          "value": "00:14:0C"
+        },
+        {
+          "kind": "oui",
+          "value": "00:15:1F"
+        },
+        {
+          "kind": "oui",
+          "value": "00:1B:CC"
+        },
+        {
+          "kind": "oui",
+          "value": "34:7F:63"
+        },
+        {
+          "kind": "oui",
+          "value": "38:C2:BA"
+        },
+        {
+          "kind": "oui",
+          "value": "84:57:87"
+        },
+        {
+          "kind": "oui",
+          "value": "88:23:64"
+        },
+        {
+          "kind": "oui",
+          "value": "94:86:D4"
+        },
+        {
+          "kind": "oui",
+          "value": "BC:E7:96"
+        },
+        {
+          "kind": "oui",
+          "value": "FC:8E:6E"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Other CCTV / DVR makers (by IEEE registration name)",
+        "ja": "その他の CCTV／DVR メーカー（IEEE 登録名）"
+      },
+      "noteLocalized": {
+        "en": "Makers whose IEEE registration says CCTV, Surveillance or DVR: GKB, Kingtek, CCTV Neotech, StreamCCTV, Watchnet, DVR C&C, Multivision, Surveillance Pro, Concept Pro, Euro Protection, Shanghai Surveillance.",
+        "ja": "IEEE の登録名に CCTV、Surveillance、DVR を含むメーカー：GKB、Kingtek、CCTV Neotech、StreamCCTV、Watchnet、DVR C&C、Multivision、Surveillance Pro、Concept Pro、Euro Protection、Shanghai Surveillance。"
+      }
     },
     {
       "id": "sweep-remote-id",
@@ -1672,8 +3287,16 @@
           "value": "FE6C"
         },
         {
+          "kind": "service",
+          "value": "FC81"
+        },
+        {
           "kind": "name",
           "value": "Axon*"
+        },
+        {
+          "kind": "oui",
+          "value": "00:25:DF"
         }
       ],
       "builtIn": true,
@@ -2364,6 +3987,321 @@
       "nameLocalized": {
         "en": "Xiaomi IoT (MiBeacon)",
         "ja": "Xiaomi IoT（MiBeacon）"
+      }
+    },
+    {
+      "id": "sweep-simplisafe",
+      "name": "SimpliSafe 居家保全",
+      "deviceClass": "home",
+      "note": "警報系統與室內攝影機共用同一登記，無法分辨是哪一種。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 1713
+        },
+        {
+          "kind": "oui",
+          "value": "F8:51:28"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "SimpliSafe home security",
+        "ja": "SimpliSafe ホームセキュリティ"
+      },
+      "noteLocalized": {
+        "en": "The alarm system and its indoor cameras share one registration; which one it is cannot be told.",
+        "ja": "警報システムと屋内カメラが同じ登録を共有し、どちらかは判別できません。"
+      }
+    },
+    {
+      "id": "sweep-vivint",
+      "name": "Vivint 居家保全",
+      "deviceClass": "home",
+      "note": "",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 3560
+        },
+        {
+          "kind": "oui",
+          "value": "5C:2B:F5"
+        },
+        {
+          "kind": "oui",
+          "value": "84:EB:3E"
+        },
+        {
+          "kind": "oui",
+          "value": "84:EB:3F"
+        },
+        {
+          "kind": "oui",
+          "value": "A0:FE:61"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Vivint home security",
+        "ja": "Vivint ホームセキュリティ"
+      }
+    },
+    {
+      "id": "sweep-netatmo",
+      "name": "Netatmo",
+      "deviceClass": "home",
+      "note": "氣象站、恆溫器與攝影機共用同一登記。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 341
+        },
+        {
+          "kind": "oui",
+          "value": "70:EE:50"
+        }
+      ],
+      "builtIn": true,
+      "noteLocalized": {
+        "en": "Weather stations, thermostats and cameras share one registration.",
+        "ja": "気象観測機、サーモスタット、カメラが同じ登録を共有。"
+      }
+    },
+    {
+      "id": "sweep-aqara",
+      "name": "Aqara（Lumi United）",
+      "deviceClass": "home",
+      "note": "感測器、網關與攝影機共用同一登記。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 2855
+        },
+        {
+          "kind": "service",
+          "value": "FCB9"
+        },
+        {
+          "kind": "oui",
+          "value": "18:C2:3C"
+        },
+        {
+          "kind": "oui",
+          "value": "54:EF:44"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Aqara (Lumi United)",
+        "ja": "Aqara（Lumi United）"
+      },
+      "noteLocalized": {
+        "en": "Sensors, hubs and cameras share one registration.",
+        "ja": "センサー、ハブ、カメラが同じ登録を共有。"
+      }
+    },
+    {
+      "id": "sweep-tuya",
+      "name": "Tuya 智慧裝置平台",
+      "deviceClass": "home",
+      "note": "許多白牌攝影機、插座與燈具都用 Tuya 的模組；只能說是 Tuya 裝置，看不出種類。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "company",
+          "value": "",
+          "company": 2000
+        },
+        {
+          "kind": "service",
+          "value": "FD50"
+        },
+        {
+          "kind": "oui",
+          "value": "00:33:7A"
+        },
+        {
+          "kind": "oui",
+          "value": "10:5A:17"
+        },
+        {
+          "kind": "oui",
+          "value": "10:D5:61"
+        },
+        {
+          "kind": "oui",
+          "value": "18:69:D8"
+        },
+        {
+          "kind": "oui",
+          "value": "18:DE:50"
+        },
+        {
+          "kind": "oui",
+          "value": "1C:90:FF"
+        },
+        {
+          "kind": "oui",
+          "value": "20:F1:B2"
+        },
+        {
+          "kind": "oui",
+          "value": "2C:B4:71"
+        },
+        {
+          "kind": "oui",
+          "value": "30:48:7D"
+        },
+        {
+          "kind": "oui",
+          "value": "38:1F:8D"
+        },
+        {
+          "kind": "oui",
+          "value": "38:2C:E5"
+        },
+        {
+          "kind": "oui",
+          "value": "38:A5:C9"
+        },
+        {
+          "kind": "oui",
+          "value": "3C:0B:59"
+        },
+        {
+          "kind": "oui",
+          "value": "4C:A9:19"
+        },
+        {
+          "kind": "oui",
+          "value": "50:8A:06"
+        },
+        {
+          "kind": "oui",
+          "value": "50:8B:B9"
+        },
+        {
+          "kind": "oui",
+          "value": "68:57:2D"
+        },
+        {
+          "kind": "oui",
+          "value": "70:89:76"
+        },
+        {
+          "kind": "oui",
+          "value": "7C:F6:66"
+        },
+        {
+          "kind": "oui",
+          "value": "80:64:7C"
+        },
+        {
+          "kind": "oui",
+          "value": "84:E3:42"
+        },
+        {
+          "kind": "oui",
+          "value": "A0:92:08"
+        },
+        {
+          "kind": "oui",
+          "value": "A8:80:55"
+        },
+        {
+          "kind": "oui",
+          "value": "A8:DD:BC"
+        },
+        {
+          "kind": "oui",
+          "value": "AC:F8:78"
+        },
+        {
+          "kind": "oui",
+          "value": "B8:06:0D"
+        },
+        {
+          "kind": "oui",
+          "value": "BC:35:1E"
+        },
+        {
+          "kind": "oui",
+          "value": "C0:F8:53"
+        },
+        {
+          "kind": "oui",
+          "value": "C4:82:E1"
+        },
+        {
+          "kind": "oui",
+          "value": "CC:8C:BF"
+        },
+        {
+          "kind": "oui",
+          "value": "D0:32:E7"
+        },
+        {
+          "kind": "oui",
+          "value": "D0:82:E8"
+        },
+        {
+          "kind": "oui",
+          "value": "D0:82:EB"
+        },
+        {
+          "kind": "oui",
+          "value": "D4:A6:51"
+        },
+        {
+          "kind": "oui",
+          "value": "D8:1F:12"
+        },
+        {
+          "kind": "oui",
+          "value": "D8:C8:0C"
+        },
+        {
+          "kind": "oui",
+          "value": "D8:D6:68"
+        },
+        {
+          "kind": "oui",
+          "value": "D8:FC:92"
+        },
+        {
+          "kind": "oui",
+          "value": "E4:AE:E4"
+        },
+        {
+          "kind": "oui",
+          "value": "F8:17:2D"
+        },
+        {
+          "kind": "oui",
+          "value": "FC:3C:D7"
+        },
+        {
+          "kind": "oui",
+          "value": "FC:67:1F"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Tuya smart-device platform",
+        "ja": "Tuya スマートデバイスプラットフォーム"
+      },
+      "noteLocalized": {
+        "en": "Many white-label cameras, plugs and lights use Tuya modules; this only says it is a Tuya device, not which kind.",
+        "ja": "多くのノーブランドのカメラ、プラグ、照明が Tuya のモジュールを使用。Tuya の機器であることしか分かりません。"
       }
     },
     {
