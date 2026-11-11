@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 109,
+  "catalogVersion": 110,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -14,7 +14,7 @@
           "kind": "companyData",
           "value": "",
           "company": 76,
-          "prefix": "12"
+          "prefix": "1219"
         },
         {
           "kind": "service",
@@ -97,7 +97,10 @@
       "noteLocalized": {
         "en": "SmartTag broadcasts service data under FD5A, a UUID registered by Samsung (SmartThings Find).",
         "ja": "SmartTag は、Samsung が登録した FD5A のサービスデータで発信します（SmartThings Find）。"
-      }
+      },
+      "yieldsTo": [
+        "sweep-samsung"
+      ]
     },
     {
       "id": "sweep-find-hub",
@@ -106,11 +109,6 @@
       "note": "依 Google Find My Device Network 配件規格，以 Eddystone FEAA 服務資料的 0x40／0x41 訊框廣播。",
       "attention": "",
       "rules": [
-        {
-          "kind": "serviceData",
-          "value": "FEAA",
-          "prefix": "40"
-        },
         {
           "kind": "serviceData",
           "value": "FEAA",
@@ -505,7 +503,8 @@
       ],
       "yieldsTo": [
         "sweep-omi-glass"
-      ]
+      ],
+      "matchAll": true
     },
     {
       "id": "sweep-omi-glass",
@@ -1251,9 +1250,9 @@
     },
     {
       "id": "sweep-owlet",
-      "name": "Owlet 嬰兒監視器",
-      "deviceClass": "camera",
-      "note": "",
+      "name": "Owlet 嬰兒監測",
+      "deviceClass": "health",
+      "note": "藍牙廣播來自 Owlet 的襪型血氧感測器，不是攝影機；Owlet Cam 只用 Wi-Fi。",
       "attention": "",
       "rules": [
         {
@@ -1264,8 +1263,12 @@
       ],
       "builtIn": true,
       "nameLocalized": {
-        "en": "Owlet baby monitor",
-        "ja": "Owlet ベビーモニター"
+        "en": "Owlet baby monitoring",
+        "ja": "Owlet ベビーモニタリング"
+      },
+      "noteLocalized": {
+        "en": "The Bluetooth broadcast comes from Owlet's sock pulse-oximeter, not a camera; the Owlet Cam is Wi-Fi only.",
+        "ja": "Bluetooth の発信は Owlet のソックス型パルスオキシメーターのもので、カメラではありません。Owlet Cam は Wi-Fi のみ。"
       }
     },
     {
@@ -1318,7 +1321,7 @@
       "id": "sweep-canon",
       "name": "Canon 相機",
       "deviceClass": "camera",
-      "note": "Canon 的 SIG 廠商 ID 與相機部門的 OUI；印表機用不同的登記。",
+      "note": "藍牙用 Canon 的 SIG 廠商 ID（PIXMA 印表機的藍牙設定也會用到）；Wi-Fi 只用 Canon Imaging Systems 的 OUI，「CANON INC.」的 OUI 多半是印表機。",
       "attention": "",
       "rules": [
         {
@@ -1328,111 +1331,7 @@
         },
         {
           "kind": "oui",
-          "value": "00:00:85"
-        },
-        {
-          "kind": "oui",
-          "value": "00:1E:8F"
-        },
-        {
-          "kind": "oui",
           "value": "00:30:C4"
-        },
-        {
-          "kind": "oui",
-          "value": "00:BB:C1"
-        },
-        {
-          "kind": "oui",
-          "value": "18:0C:AC"
-        },
-        {
-          "kind": "oui",
-          "value": "2C:9E:FC"
-        },
-        {
-          "kind": "oui",
-          "value": "34:9F:7B"
-        },
-        {
-          "kind": "oui",
-          "value": "40:F8:DF"
-        },
-        {
-          "kind": "oui",
-          "value": "50:03:CF"
-        },
-        {
-          "kind": "oui",
-          "value": "5C:62:5A"
-        },
-        {
-          "kind": "oui",
-          "value": "60:12:8B"
-        },
-        {
-          "kind": "oui",
-          "value": "6C:3C:7C"
-        },
-        {
-          "kind": "oui",
-          "value": "6C:F2:D8"
-        },
-        {
-          "kind": "oui",
-          "value": "74:38:B7"
-        },
-        {
-          "kind": "oui",
-          "value": "74:BF:C0"
-        },
-        {
-          "kind": "oui",
-          "value": "80:03:0D"
-        },
-        {
-          "kind": "oui",
-          "value": "84:BA:3B"
-        },
-        {
-          "kind": "oui",
-          "value": "88:87:17"
-        },
-        {
-          "kind": "oui",
-          "value": "9C:32:CE"
-        },
-        {
-          "kind": "oui",
-          "value": "A4:F0:1F"
-        },
-        {
-          "kind": "oui",
-          "value": "AC:2F:E5"
-        },
-        {
-          "kind": "oui",
-          "value": "D8:49:2F"
-        },
-        {
-          "kind": "oui",
-          "value": "DC:C2:C9"
-        },
-        {
-          "kind": "oui",
-          "value": "F4:81:39"
-        },
-        {
-          "kind": "oui",
-          "value": "F4:A9:97"
-        },
-        {
-          "kind": "oui",
-          "value": "F8:0D:60"
-        },
-        {
-          "kind": "oui",
-          "value": "F8:A2:6D"
         }
       ],
       "builtIn": true,
@@ -1441,8 +1340,8 @@
         "ja": "Canon カメラ"
       },
       "noteLocalized": {
-        "en": "Canon's SIG company ID and the imaging division's OUIs; printers use other registrations.",
-        "ja": "Canon の SIG 企業 ID とイメージング部門の OUI。プリンターは別の登録。"
+        "en": "Bluetooth uses Canon's SIG company ID (PIXMA printers use it for Bluetooth setup too); Wi-Fi uses only the Canon Imaging Systems OUI, as the \"CANON INC.\" OUIs are mostly printers.",
+        "ja": "Bluetooth は Canon の SIG 企業 ID（PIXMA プリンターの Bluetooth 設定にも使用）。Wi-Fi は Canon Imaging Systems の OUI のみ。「CANON INC.」の OUI は大半がプリンター。"
       }
     },
     {
@@ -3128,9 +3027,9 @@
     },
     {
       "id": "sweep-dji",
-      "name": "DJI",
+      "name": "DJI 裝置",
       "deviceClass": "drone",
-      "note": "",
+      "note": "DJI 的廠商 ID 與名稱也用在 Mic 麥克風、Osmo／RS 雲台、遙控器與眼鏡；沒有收到 Remote ID 時只代表有 DJI 裝置在廣播。",
       "attention": "",
       "rules": [
         {
@@ -3192,6 +3091,14 @@
         }
       ],
       "builtIn": true,
+      "nameLocalized": {
+        "en": "DJI device",
+        "ja": "DJI 機器"
+      },
+      "noteLocalized": {
+        "en": "DJI's company ID and names are also used by its Mic microphones, Osmo / RS gimbals, remote controllers and goggles; without a Remote ID broadcast this only says a DJI device is broadcasting.",
+        "ja": "DJI の企業 ID と名前は Mic マイク、Osmo／RS ジンバル、送信機、ゴーグルにも使われています。Remote ID を受信していなければ、DJI の機器が発信していることしか分かりません。"
+      },
       "yieldsTo": [
         "sweep-osmo"
       ]
@@ -3420,9 +3327,9 @@
     {
       "id": "sweep-hobby-ble",
       "name": "藍牙序列模組（開發板）",
-      "deviceClass": "pentest",
+      "deviceClass": "other",
       "note": "HM-10、JDY、BT05 等便宜藍牙序列模組的出廠名稱，常見於自製裝置。",
-      "attention": "常見於資安測試與開發者的工具，出現不代表有攻擊行為。",
+      "attention": "",
       "rules": [
         {
           "kind": "name",
@@ -3453,10 +3360,6 @@
       "noteLocalized": {
         "en": "Factory names of inexpensive Bluetooth serial modules such as HM-10, JDY and BT05, common in home-made devices.",
         "ja": "HM-10、JDY、BT05 など、安価な Bluetooth シリアルモジュールの出荷時の名前。自作の機器でよく見られます。"
-      },
-      "attentionLocalized": {
-        "en": "A tool common in security testing and among developers. Seeing it does not mean an attack is taking place.",
-        "ja": "セキュリティテストや開発者の間でよく使われるツールです。検出されても、攻撃が行われていることを示すものではありません。"
       }
     },
     {
@@ -17973,7 +17876,12 @@
       "match": "cert",
       "pattern": "Axis device ID Intermediate CA*",
       "vendor": "Axis",
-      "confidence": "medium",
+      "model": "攝影機、喇叭或對講機",
+      "modelLocalized": {
+        "en": "camera, speaker or intercom",
+        "ja": "カメラ、スピーカーまたはインターホン"
+      },
+      "confidence": "low",
       "sources": [
         "https://www.axis.com/support/public-key-infrastructure-repository",
         "https://help.axis.com/en-us/axis-os-hardening-guide"
@@ -18053,12 +17961,12 @@
       "match": "server",
       "pattern": "gortsplib",
       "vendor": "MediaMTX",
-      "model": "影像串流伺服器（gortsplib）",
+      "model": "影像串流軟體（gortsplib；攝影機可能在別處）",
       "modelLocalized": {
-        "en": "video streaming server (gortsplib)",
-        "ja": "映像ストリーミングサーバー（gortsplib）"
+        "en": "video streaming software (gortsplib; any camera may be elsewhere)",
+        "ja": "映像ストリーミングソフトウェア（gortsplib。カメラは別の場所にある可能性）"
       },
-      "confidence": "medium",
+      "confidence": "low",
       "sources": [
         "https://github.com/bluenviron/gortsplib/blob/32cec10f832c97122810fa7f3e64b2138afd1a9d/server.go#L18"
       ]
@@ -18067,12 +17975,12 @@
       "match": "realm",
       "pattern": "go2rtc",
       "vendor": "go2rtc",
-      "model": "影像串流伺服器",
+      "model": "影像串流軟體（攝影機可能在別處）",
       "modelLocalized": {
-        "en": "video streaming server",
-        "ja": "映像ストリーミングサーバー"
+        "en": "video streaming software (any camera may be elsewhere)",
+        "ja": "映像ストリーミングソフトウェア（カメラは別の場所にある可能性）"
       },
-      "confidence": "medium",
+      "confidence": "low",
       "sources": [
         "https://github.com/AlexxIT/go2rtc/blob/c245815e75e2a5fd60b4290f12bfc04e55a984d3/pkg/rtsp/server.go#L53"
       ]
