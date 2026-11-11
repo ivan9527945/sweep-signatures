@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 107,
+  "catalogVersion": 108,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -801,9 +801,77 @@
         {
           "kind": "name",
           "value": "Reolink*"
+        },
+        {
+          "kind": "oui",
+          "value": "EC:71:DB"
         }
       ],
       "builtIn": true
+    },
+    {
+      "id": "sweep-imilab",
+      "name": "Imilab（創米）攝影機",
+      "deviceClass": "camera",
+      "note": "小米生態鏈的攝影機代工廠；也做門鈴與貓眼。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "60:7E:A4"
+        },
+        {
+          "kind": "oui",
+          "value": "78:DF:72"
+        },
+        {
+          "kind": "oui",
+          "value": "94:F8:27"
+        },
+        {
+          "kind": "oui",
+          "value": "B4:10:1C"
+        },
+        {
+          "kind": "oui",
+          "value": "B8:88:80"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Imilab camera",
+        "ja": "Imilab カメラ"
+      },
+      "noteLocalized": {
+        "en": "Camera maker in the Mi Home ecosystem; also makes doorbells and peephole cameras.",
+        "ja": "Mi Home エコシステムのカメラメーカー。ドアホンやドアスコープも製造。"
+      }
+    },
+    {
+      "id": "sweep-hualai",
+      "name": "Hualai（華來）攝影機",
+      "deviceClass": "camera",
+      "note": "小米生態鏈與 Wyze 早期機型的攝影機代工廠。",
+      "attention": "",
+      "rules": [
+        {
+          "kind": "oui",
+          "value": "18:50:73"
+        },
+        {
+          "kind": "oui",
+          "value": "E4:AA:EC"
+        }
+      ],
+      "builtIn": true,
+      "nameLocalized": {
+        "en": "Hualai camera",
+        "ja": "Hualai カメラ"
+      },
+      "noteLocalized": {
+        "en": "Camera maker for the Mi Home ecosystem and early Wyze models.",
+        "ja": "Mi Home エコシステムおよび初期の Wyze 機種のカメラメーカー。"
+      }
     },
     {
       "id": "sweep-spycam-apps",
