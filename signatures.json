@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 106,
+  "catalogVersion": 107,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -4547,6 +4547,10 @@
         },
         {
           "kind": "oui",
+          "value": "B0:0D:A8"
+        },
+        {
+          "kind": "oui",
           "value": "B0:1F:F4"
         },
         {
@@ -4600,6 +4604,10 @@
         {
           "kind": "oui",
           "value": "BC:33:DB"
+        },
+        {
+          "kind": "oui",
+          "value": "BC:47:D6"
         },
         {
           "kind": "oui",
@@ -16061,6 +16069,212 @@
       "confidence": "medium",
       "sources": [
         "https://github.com/AlexxIT/go2rtc/blob/c245815e75e2a5fd60b4290f12bfc04e55a984d3/pkg/rtsp/server.go#L53"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "chuangmi?camera?*",
+      "vendor": "Xiaomi / Chuangmi",
+      "model": "米家生態鏈攝影機",
+      "modelLocalized": {
+        "en": "Mi Home ecosystem camera",
+        "ja": "Mi Home エコシステムのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/chuangmi.camera.039a04"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "isa?camera?*",
+      "vendor": "Xiaomi / Hualai",
+      "model": "米家生態鏈攝影機",
+      "modelLocalized": {
+        "en": "Mi Home ecosystem camera",
+        "ja": "Mi Home エコシステムのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/isa.camera.hlc7"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "xiaomi?camera?*",
+      "vendor": "Xiaomi",
+      "model": "米家生態鏈攝影機",
+      "modelLocalized": {
+        "en": "Mi Home ecosystem camera",
+        "ja": "Mi Home エコシステムのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/xiaomi.camera.069a03"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "mijia?camera?*",
+      "vendor": "Xiaomi Mijia",
+      "model": "米家生態鏈攝影機",
+      "modelLocalized": {
+        "en": "Mi Home ecosystem camera",
+        "ja": "Mi Home エコシステムのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/mijia.camera.miipc"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "miot?camera?*",
+      "vendor": "Xiaomi MIoT",
+      "model": "米家生態鏈攝影機",
+      "modelLocalized": {
+        "en": "Mi Home ecosystem camera",
+        "ja": "Mi Home エコシステムのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "xiaovv?camera?*",
+      "vendor": "Xiaovv",
+      "model": "米家生態鏈攝影機",
+      "modelLocalized": {
+        "en": "Mi Home ecosystem camera",
+        "ja": "Mi Home エコシステムのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/xiaovv.camera.a1"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "mxiang?camera?*",
+      "vendor": "Xiaovv / Mxiang",
+      "model": "米家生態鏈攝影機",
+      "modelLocalized": {
+        "en": "Mi Home ecosystem camera",
+        "ja": "Mi Home エコシステムのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/mxiang.camera.c301"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "lumi?camera?*",
+      "vendor": "Aqara",
+      "model": "攝影機",
+      "modelLocalized": {
+        "en": "camera",
+        "ja": "カメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://opendoc.aqara.com/en/docs/SDKDevelopment/IOSDevelopmentGuide/Cameracategory/CameraSDKsupporteddevicelist.html"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "madv?cateye?*",
+      "vendor": "Xiaomi / Madv",
+      "model": "門鈴或貓眼攝影機",
+      "modelLocalized": {
+        "en": "video doorbell or peephole camera",
+        "ja": "ドアホンまたはドアスコープのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/madv.cateye.miowlv2"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "chuangmi?cateye?*",
+      "vendor": "Xiaomi / Chuangmi",
+      "model": "門鈴或貓眼攝影機",
+      "modelLocalized": {
+        "en": "video doorbell or peephole camera",
+        "ja": "ドアホンまたはドアスコープのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/chuangmi.cateye.043a02"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "xiaomi?cateye?*",
+      "vendor": "Xiaomi",
+      "model": "門鈴或貓眼攝影機",
+      "modelLocalized": {
+        "en": "video doorbell or peephole camera",
+        "ja": "ドアホンまたはドアスコープのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/xiaomi.cateye.4pro"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "miot?cateye?*",
+      "vendor": "Xiaomi MIoT",
+      "model": "門鈴或貓眼攝影機",
+      "modelLocalized": {
+        "en": "video doorbell or peephole camera",
+        "ja": "ドアホンまたはドアスコープのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26"
+      ]
+    },
+    {
+      "match": "hostname",
+      "pattern": "loock?cateye?*",
+      "vendor": "Loock",
+      "model": "門鈴或貓眼攝影機",
+      "modelLocalized": {
+        "en": "video doorbell or peephole camera",
+        "ja": "ドアホンまたはドアスコープのカメラ"
+      },
+      "confidence": "medium",
+      "sources": [
+        "https://miot-spec.org/miot-spec-v2/instances?status=all",
+        "https://github.com/rytilahti/python-miio/blob/9a00e0888ef85f8d8d84888cabd9e46d1b0a18df/miio/discovery.py#L20-L26",
+        "https://home.miot-spec.com/spec/loock.cateye.v01"
       ]
     }
   ]
