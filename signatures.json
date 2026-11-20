@@ -1,7 +1,7 @@
 {
   "format": "sweep-signatures",
   "formatVersion": 2,
-  "catalogVersion": 111,
+  "catalogVersion": 112,
   "signatures": [
     {
       "id": "sweep-airtag",
@@ -6456,6 +6456,10 @@
         },
         {
           "kind": "oui",
+          "value": "B0:0D:A8"
+        },
+        {
+          "kind": "oui",
           "value": "B0:1F:F4"
         },
         {
@@ -6509,6 +6513,10 @@
         {
           "kind": "oui",
           "value": "BC:33:DB"
+        },
+        {
+          "kind": "oui",
+          "value": "BC:47:D6"
         },
         {
           "kind": "oui",
